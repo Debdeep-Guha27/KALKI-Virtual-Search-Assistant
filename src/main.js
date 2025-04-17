@@ -68,7 +68,7 @@ async function getJoke() {
 
 async function getNews() {
   const apiKey = import.meta.env.VITE_NEWS_API_KEY;
-  let url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+  let url = `https://gnews.io/api/v4/top-headlines?lang=en&country=us&token=${apiKey}`;
     try {
         let response = await fetch(url);
         let data = await response.json();
